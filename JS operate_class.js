@@ -24,11 +24,9 @@ function removeClass(ele, cls) {
 function replaceClass(ele, oldCls, newCls) {
   if (!hasClass(ele, newCls)) {
     if (hasClass(ele, oldCls)) {
-      console.log('hasClass');
       var reg = new RegExp('(\\s|^)' + oldCls + '(\\s|$)');
       ele.className = ele.className.replace(reg, '$1' + newCls + '$2');
     } else {
-      console.log('noClass');
       ele.className += " " + newCls;
     }
   }
